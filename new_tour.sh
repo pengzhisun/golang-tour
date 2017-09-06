@@ -16,7 +16,7 @@ echo "/* ***********************************************************************
 
 package main
 
-import "fmt"
+import \"fmt\"
 
 func main() {
-}" > "${TOUR_NAME}\${TOUR_NAME}.go"
+}" > "${TOUR_NAME}/${TOUR_NAME}.go"
