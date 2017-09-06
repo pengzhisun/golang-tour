@@ -15,7 +15,7 @@ package main
 
 import "fmt"
 
-// Vertext struct
+// Vertex struct
 type Vertex struct {
 	X, Y int
 }
