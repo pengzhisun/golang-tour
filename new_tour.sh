@@ -1,4 +1,5 @@
 #!/bin/env bash
+# new tour helper script
 # usages:
 #    bash new_tourh.sh for flowcontrol/1
 
