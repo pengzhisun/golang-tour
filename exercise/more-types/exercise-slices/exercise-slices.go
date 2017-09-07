@@ -26,15 +26,15 @@ func Pic(dx, dy int) [][]uint8 {
 	for y := range s {
 		s[y] = make([]uint8, dx)
 		for x := range s[y] {
-			// default image: https://raw.githubusercontent.com/pengzhisun/golang-tour/master/exercise/more-types/exercise-slices/images/slices0.png
+			// default image: images/slices0.png https://git.io/v5wZu
 
-			// (x+y)/2 image: https://raw.githubusercontent.com/pengzhisun/golang-tour/master/exercise/more-types/exercise-slices/images/slices1.png
+			// (x+y)/2 image: images/slices1.png https://git.io/v5wZw
 			// s[y][x] = uint8((x + y) / 2)
 
-			// x*y image: https://raw.githubusercontent.com/pengzhisun/golang-tour/master/exercise/more-types/exercise-slices/images/slices2.png
+			// x*y image: images/slices2.png https://git.io/v5wZr
 			// s[y][x] = uint8(x * y)
 
-			// x^y image: https://raw.githubusercontent.com/pengzhisun/golang-tour/master/exercise/more-types/exercise-slices/images/slices3.png
+			// x^y image: images/slices3.png https://git.io/v5wZK
 			s[y][x] = uint8(x ^ y)
 		}
 	}
