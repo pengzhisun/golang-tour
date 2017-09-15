@@ -30,14 +30,14 @@ import (
 
 // Image struct
 type Image struct {
-	w         int
-	h         int
+	width     int
+	height    int
 	generator func(int, int) uint8
 }
 
 // Bounds method for Image struct
 func (img Image) Bounds() image.Rectangle {
-	return image.Rect(0, 0, img.w, img.h)
+	return image.Rect(0, 0, img.width, img.height)
 }
 
 // ColorModel method for Image struct
@@ -51,42 +51,26 @@ func (img Image) At(x, y int) color.Color {
 	return color.RGBA{v, v, 255, 255}
 }
 
-func generator0(x, y int) uint8 {
-	return 0
-}
-
-func generator1(x, y int) uint8 {
-	return uint8((x + y) / 2)
-}
-
-func generator2(x, y int) uint8 {
-	return uint8(x * y)
-}
-
-func generator3(x, y int) uint8 {
-	return uint8(x ^ y)
-}
-
 func main() {
-	var width, height int = 256, 256
+	var w, h int = 256, 256
 
 	// default image: images/images0.png https://git.io/v57kQ
-	m0 := Image{width, height, generator0}
+	m0 := Image{w, h, func(x, y int) uint8 { return 0 }}
 	fmt.Println("default image:")
 	pic.ShowImage(m0)
 
 	// (x+y)/2 image: images/images1.png https://git.io/v57Ie
-	m1 := Image{width, height, generator1}
+	m1 := Image{w, h, func(x, y int) uint8 { return uint8((x + y) / 2) }}
 	fmt.Println("(x+y)/2 image:")
 	pic.ShowImage(m1)
 
 	// x*y image: images/images2.png https://git.io/v57Ik
-	m2 := Image{width, height, generator2}
+	m2 := Image{w, h, func(x, y int) uint8 { return uint8(x * y) }}
 	fmt.Println("x*y image:")
 	pic.ShowImage(m2)
 
 	// x^y image: images/images3.png https://git.io/v57Is
-	m3 := Image{width, height, generator3}
+	m3 := Image{w, h, func(x, y int) uint8 { return uint8(x ^ y) }}
 	fmt.Println("x^y image:")
 	pic.ShowImage(m3)
 }
