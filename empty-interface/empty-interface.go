@@ -1,6 +1,6 @@
 /* ****************************************************************************
  * Tour: The empty interface
- * Link: https://tour.golang.org/
+ * Link: https://tour.golang.org/methods/14
  * ----------------------------------------------------------------------------
  * The interface type that specifies zero methods is known as the empty
  * interface:
