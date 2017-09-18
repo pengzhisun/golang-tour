@@ -1,6 +1,6 @@
 /* ****************************************************************************
  * Tour: Buffered Channels
- * Link: https://tour.golang.org/
+ * Link: https://tour.golang.org/concurrency/3
  * ----------------------------------------------------------------------------
  * Channels can be buffered. Provide the buffer length as the second argument
  * to make to initialize a buffered channel:
